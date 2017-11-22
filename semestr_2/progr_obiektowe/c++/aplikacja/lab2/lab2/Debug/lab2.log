@@ -1,0 +1,17 @@
+﻿  Source.cpp
+d:\lukasz\desktop\aplikacja\lab2\lab2\source.cpp(24): error C2039: 'setBoki': is not a member of 'Figura'
+  d:\lukasz\desktop\aplikacja\lab2\lab2\source.cpp(5): note: see declaration of 'Figura'
+d:\lukasz\desktop\aplikacja\lab2\lab2\source.cpp(26): error C2065: 'licznik': undeclared identifier
+d:\lukasz\desktop\aplikacja\lab2\lab2\source.cpp(29): error C2065: 'tablica': undeclared identifier
+d:\lukasz\desktop\aplikacja\lab2\lab2\source.cpp(30): error C2065: 'obwod': undeclared identifier
+d:\lukasz\desktop\aplikacja\lab2\lab2\source.cpp(30): error C2065: 'tablica': undeclared identifier
+d:\lukasz\desktop\aplikacja\lab2\lab2\source.cpp(33): error C2065: 'licznik': undeclared identifier
+d:\lukasz\desktop\aplikacja\lab2\lab2\source.cpp(35): error C2065: 'tablica': undeclared identifier
+d:\lukasz\desktop\aplikacja\lab2\lab2\source.cpp(43): error C2039: 'getBoki': is not a member of 'Figura'
+  d:\lukasz\desktop\aplikacja\lab2\lab2\source.cpp(5): note: see declaration of 'Figura'
+d:\lukasz\desktop\aplikacja\lab2\lab2\source.cpp(45): error C2065: 'licznik': undeclared identifier
+d:\lukasz\desktop\aplikacja\lab2\lab2\source.cpp(47): error C2065: 'tablica': undeclared identifier
+d:\lukasz\desktop\aplikacja\lab2\lab2\source.cpp(59): error C2039: 'setBoki': is not a member of 'Figura'
+  d:\lukasz\desktop\aplikacja\lab2\lab2\source.cpp(5): note: see declaration of 'Figura'
+d:\lukasz\desktop\aplikacja\lab2\lab2\source.cpp(60): error C2039: 'getBoki': is not a member of 'Figura'
+  d:\lukasz\desktop\aplikacja\lab2\lab2\source.cpp(5): note: see declaration of 'Figura'

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>inwentarz</class>
+ <widget class="QMainWindow" name="inwentarz">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>546</width>
+    <height>310</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>inwentarz</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>171</width>
+      <height>221</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLabel" name="label_pomieszczenie">
+       <property name="text">
+        <string>Pomieszczenie:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSpinBox" name="spinBox_nrPomieszczenia"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_komputer">
+       <property name="text">
+        <string>Komputer:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBox_komputer">
+       <property name="mouseTracking">
+        <bool>false</bool>
+       </property>
+       <property name="editable">
+        <bool>false</bool>
+       </property>
+       <item>
+        <property name="text">
+         <string>stacjonarny</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>notebook</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_ilosc">
+       <property name="text">
+        <string>Ilość:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSpinBox" name="spinBox_ilosc"/>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_zapisz">
+       <property name="text">
+        <string>Zapisz</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QTextBrowser" name="textBrowser">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>20</y>
+      <width>256</width>
+      <height>221</height>
+     </rect>
+    </property>
+   </widget>
+   <zorder>label_pomieszczenie</zorder>
+   <zorder>label_komputer</zorder>
+   <zorder>label_ilosc</zorder>
+   <zorder>comboBox_komputer</zorder>
+   <zorder>spinBox_nrPomieszczenia</zorder>
+   <zorder>spinBox_ilosc</zorder>
+   <zorder>pushButton_zapisz</zorder>
+   <zorder>textBrowser</zorder>
+   <zorder>textBrowser</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>546</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuInwentarz">
+    <property name="title">
+     <string>Inwentarz </string>
+    </property>
+   </widget>
+   <addaction name="menuInwentarz"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
