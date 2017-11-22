@@ -1,0 +1,139 @@
+
+	/*
+	 *  Demonstracja dzia³ania map typu
+	 *  HashMap, TreeMap.
+	 *
+	 *  Autor: Pawe³ Rogalinski
+	 *   Data: paŸdziernik 2013 r.
+	 */
+
+	import java.awt.Dimension;
+	import java.awt.event.ActionEvent;
+	import java.awt.event.ActionListener;
+	import java.util.*;
+	import javax.swing.*;
+	import javax.swing.table.DefaultTableModel;
+
+	public class PorownajMapy extends JFrame implements ActionListener {
+
+		private static final long serialVersionUID = 1L;
+
+		HashMap<String, String> hashMap = new HashMap<String, String>();
+		TreeMap<String, String> treeMap = new TreeMap<String, String>();
+
+	    WidokMapy widokHashMap;
+		WidokMapy widokTreeMap;
+
+		JLabel etykieta_klucza   = new JLabel("  Klucz:");
+		JLabel etykieta_wartosc  = new JLabel("Wartoœæ:");
+		JTextField pole_klucz    = new JTextField(10);
+		JTextField pole_wartosc  = new JTextField(10);
+		JButton przycisk_dodaj   = new JButton("Dodaj");
+		JButton przycisk_usun    = new JButton("Usuñ");
+		JButton przycisk_wyczysc = new JButton("Wyczyœæ");
+		JButton przycisk_autor   = new JButton("Autor");
+
+
+		public PorownajMapy() {
+			super("Porownanie dzia³ania map - DEMONSTRACJA");
+			setDefaultCloseOperation(EXIT_ON_CLOSE);
+			setSize(400, 330);
+
+			JPanel panel = new JPanel();
+			panel.add(etykieta_klucza);
+			panel.add(pole_klucz);
+			panel.add(etykieta_wartosc);
+			panel.add(pole_wartosc);
+			przycisk_dodaj.addActionListener(this);
+			panel.add(przycisk_dodaj);
+
+			przycisk_usun.addActionListener(this);
+			panel.add(przycisk_usun);
+
+			przycisk_wyczysc.addActionListener(this);
+			panel.add(przycisk_wyczysc);
+
+			przycisk_autor.addActionListener(this);
+			panel.add(przycisk_autor);
+
+			widokHashMap = new WidokMapy(hashMap, 150, 200, "hashMap:");
+			panel.add(widokHashMap);
+
+			widokTreeMap = new WidokMapy(treeMap, 150, 200, "treeMap:");
+			panel.add(widokTreeMap);
+
+			setContentPane(panel);
+			setVisible(true);
+		}
+
+		@Override
+		public void actionPerformed(ActionEvent evt) {
+			String klucz, wartosc;
+			Object zrodlo = evt.getSource();
+
+			if (zrodlo == przycisk_dodaj) {
+				klucz = pole_klucz.getText();
+				wartosc = pole_wartosc.getText();
+				if (!klucz.equals("")) {
+					hashMap.put(klucz, wartosc);
+					treeMap.put(klucz, wartosc);
+				}
+			} else
+
+			if (zrodlo == przycisk_wyczysc) {
+				hashMap.clear();
+				treeMap.clear();
+			} else
+
+			if (zrodlo == przycisk_usun) {
+				klucz = pole_klucz.getText();
+				hashMap.remove(klucz);
+				treeMap.remove(klucz);
+			} else
+
+			if (zrodlo == przycisk_autor) {
+				JOptionPane.showMessageDialog(this,
+						"Autor: Pawe³ Rogalinski\nData: paŸdziernik 2013 r.");
+			}
+
+			widokHashMap.refresh();
+			widokTreeMap.refresh();
+		}
+
+
+		public static void main(String[] args) {
+			new PorownajMapy();
+		}
+	}
+
+
+
+	class WidokMapy extends JScrollPane {
+		private static final long serialVersionUID = 1L;
+
+		private JTable tabela;
+		private DefaultTableModel modelTabeli;
+		private Map<String, String> map;
+
+		WidokMapy(Map<String, String> map, int szerokosc, int wysokosc,
+				String opis) {
+			String[] kolumny = { "Klucz:", "Wartoœæ:" };
+			modelTabeli = new DefaultTableModel(kolumny, 0);
+			tabela = new JTable(modelTabeli);
+			tabela.setRowSelectionAllowed(false);
+			this.map = map;
+			setViewportView(tabela);
+			setPreferredSize(new Dimension(szerokosc, wysokosc));
+			setBorder(BorderFactory.createTitledBorder(opis));
+		}
+
+		void refresh(){
+	    	modelTabeli.setRowCount(0);
+			for (String klucz : map.keySet()) {
+				String wartosc = map.get(klucz);
+				String[] wiersz = { klucz, wartosc };
+				modelTabeli.addRow(wiersz);
+	    	}
+	    }
+
+}

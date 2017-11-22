@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="KolekcjeLab4/src"/>
+	<classpathentry kind="src" path="RoomLab4/src"/>
+	<classpathentry kind="src" path="WordsCounter/src"/>
+	<classpathentry kind="lib" path="PorownajKolekcje_DEMONSTRACJA.jar"/>
+	<classpathentry kind="lib" path="PorownajMapy_DEMONSTRACJA.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="KolekcjeLab4/bin"/>
+</classpath>
