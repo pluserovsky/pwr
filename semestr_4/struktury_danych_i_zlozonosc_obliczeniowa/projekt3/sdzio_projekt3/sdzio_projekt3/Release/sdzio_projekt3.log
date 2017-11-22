@@ -1,0 +1,10 @@
+﻿  Knapsack.cpp
+Knapsack.cpp(234): warning C4334: '<<': result of 32-bit shift implicitly converted to 64 bits (was 64-bit shift intended?)
+Knapsack.cpp(266): warning C4018: '>': signed/unsigned mismatch
+  Generating code
+  2 of 313 functions ( 0.6%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    9 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  sdzio_projekt3.vcxproj -> g:\lukasz\documents\visual studio 2015\Projects\sdzio_projekt3\Release\sdzio_projekt3.exe
+  sdzio_projekt3.vcxproj -> g:\lukasz\documents\visual studio 2015\Projects\sdzio_projekt3\Release\sdzio_projekt3.pdb (Full PDB)
