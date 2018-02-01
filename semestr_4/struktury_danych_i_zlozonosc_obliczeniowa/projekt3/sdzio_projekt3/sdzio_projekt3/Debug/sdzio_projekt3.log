@@ -1,4 +1,0 @@
-﻿  Source.cpp
-g:\lukasz\documents\visual studio 2015\projects\sdzio_projekt3\sdzio_projekt3\source.cpp(62): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-  sdzio_projekt3.vcxproj -> g:\lukasz\documents\visual studio 2015\Projects\sdzio_projekt3\Debug\sdzio_projekt3.exe
-  sdzio_projekt3.vcxproj -> g:\lukasz\documents\visual studio 2015\Projects\sdzio_projekt3\Debug\sdzio_projekt3.pdb (Full PDB)
